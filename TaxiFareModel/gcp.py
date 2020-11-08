@@ -44,8 +44,8 @@ def download_model(model_version=MODEL_VERSION, bucket=BUCKET_NAME, rm=True):
     blob.download_to_filename('model.joblib')
     print(f"=> pipeline downloaded from storage")
     model = joblib.load('model.joblib')
-    if rm:
-        os.remove('./model.joblib')
+    # if rm:
+    #     os.remove('./model.joblib')
     return model
 
 if __name__ == '__main__':
