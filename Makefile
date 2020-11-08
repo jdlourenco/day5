@@ -29,7 +29,7 @@ deploy_heroku:
 
 heroku_set_gcp_env:
 # 	-@heroku config:set GOOGLE_APPLICATION_CREDENTIALS="$(< /Users/jdlourenco/dev/lewagon/gcp/wagon_bootcamp-efb2ea08adae.json)"
-	-@heroku config:set GOOGLE_APPLICATION_CREDENTIALS="$(< cat /Users/jdlourenco/dev/lewagon/gcp/wagon_bootcamp-efb2ea08adae.json)"
+	-@heroku config:set GOOGLE_APPLICATION_CREDENTIALS="`cat /Users/jdlourenco/dev/lewagon/gcp/wagon_bootcamp-efb2ea08adae.json`"
 
 heroku_update: deploy_heroku heroku_set_gcp_env
 # ----------------------------------
